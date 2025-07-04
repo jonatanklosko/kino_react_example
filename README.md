@@ -1,21 +1,25 @@
 # KinoReactExample
 
-**TODO: Add description**
+Example of an interactive [Kino](https://github.com/livebook-dev/kino) component implemented using React.
 
-## Installation
+Generated with `mix new kino_react_example`, see the second commit for all changes implementing the component.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `kino_react_example` to your list of dependencies in `mix.exs`:
+How to use:
 
-```elixir
-def deps do
-  [
-    {:kino_react_example, "~> 0.1.0"}
-  ]
-end
-```
+1. In Livebook, install the local package:
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/kino_react_example>.
+   ```elixir
+   Mix.install([
+     {:kino_react_example, path: "~/path/to/kino_react_example"}
+   ])
+   ```
 
+2. Create the component in a new cell:
+
+   ```elixir
+   KinoReactExample.Counter.new()
+   ```
+
+3. Whenever you make changes to `assets/`, run `npm run build` in the assets directory. To see the changes take effect, restart notebook runtime and evaluate again (shortcuts: `00` + `cmd + shift + enter`).
+
+   > Hint: to avoid running `npm run build` every time, you can start `npm run dev` in a separate terminal, which will rebuild on any assets change. It will also build in dev mode, with source maps and dev warnings.

@@ -21,3 +21,6 @@ kino_react_example-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Node modules.
+/assets/node_modules/
